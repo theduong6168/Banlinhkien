@@ -12,7 +12,9 @@ LiquidCrystal_I2C lcd(0x3F, 16, 2);
   byte stepA8[8] = { 0x00,  0x08,  0x08,  0x10,  0x10,  0x18,  0x1E,  0x18};
   
 void setup() {
- lcd.begin();
+ lcd.init();
+ lcd.backlight();
+ lcd.begin(16,2);
  lcd.clear();
  lcd.setCursor(0,0);
  lcd.print("Banlinhkien.com");
